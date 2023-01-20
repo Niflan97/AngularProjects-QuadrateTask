@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <h1 class="mb-">
+        Add Students
+    </h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addStudents()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="fName" 
+                  name="fName" [(ngModel)]="addStudentsRequest.fName" [ngModelOptions]="{standalone: true}" >
+                </div>
+        
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" 
+                    email="email" [(ngModel)]="addStudentsRequest.email" [ngModelOptions]="{standalone: true}" >
+                  </div>
+                  <div class="mb-3">
+                    <label for="Phone" class="form-label">Phone</label>
+                    <input type="number" class="form-control" id="phone" 
+                    phone="phone" [(ngModel)]="addStudentsRequest.phone" [ngModelOptions]="{standalone: true}">
+                  </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+   
+
+</div>
